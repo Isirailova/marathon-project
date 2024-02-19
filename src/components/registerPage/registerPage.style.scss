@@ -1,0 +1,85 @@
+html {
+  height: 100%;
+}
+
+html,
+body {
+  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+}
+.register__page__container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 30px;
+  margin-top: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: lightblue; /* Adding a background color */
+  color: #333;
+}
+.register__page {
+  width: 500px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+
+  &__image {
+    width: 50%;
+    height: auto;
+    margin-left: 30px;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  form {
+    .form-group {
+      margin-bottom: 10px;
+
+      label {
+        display: block;
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="date"],
+      input[type="tel"],
+      select {
+        width: calc(100% - 5px);
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        box-sizing: border-box;
+
+        &:focus {
+          border-color: #007bff;
+          box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+        }
+      }
+
+      select {
+        appearance: none;
+      }
+    }
+  }
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #386ca3;
+  }
+}
