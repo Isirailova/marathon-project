@@ -1,18 +1,51 @@
-.race-page {
-  max-width: 90%;
+body {
+  background-image: url("https://images.unsplash.com/photo-1585074655513-497707ddc79e?q=80&w=3055&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.race__page {
+  max-width: 800px;
   margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+
+  p {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  &__gif {
+    position: absolute;
+    top: 10;
+    left: 0;
+    margin: 20px;
+  }
+
+  select {
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+  iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+  }
 }
 
-.race-page p {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
+.location-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-.race-page select {
-  margin-bottom: 20px;
-  padding: 8px;
-  font-size: 16px;
-}
-.race-page img {
-  margin-top: 20px;
+  .location-icon {
+    margin-right: 5px;
+  }
+
+  .location-link {
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+  }
 }

@@ -6,12 +6,6 @@ import "./registerPage.style.scss";
 const RegisterPage = () => {
   return (
     <div className="register__page__container">
-      <img
-        src="https://th.bing.com/th/id/OIG3.DwqffwMWhrlOowNyHMyq?w=1024&h=1024&rs=1&pid=ImgDetMain"
-        alt="Chicago City View"
-        className="register__page__image"
-      />
-
       <div className="register__page">
         <h2>Registration Form</h2>
         <form>
@@ -104,6 +98,11 @@ const RegisterPage = () => {
           <button type="submit">Register</button>
         </form>
       </div>
+      <img
+        src="https://th.bing.com/th/id/OIG3.DwqffwMWhrlOowNyHMyq?w=1024&h=1024&rs=1&pid=ImgDetMain"
+        alt="Chicago City View"
+        className="register__page__image"
+      />
     </div>
   );
 };

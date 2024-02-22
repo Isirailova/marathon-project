@@ -4,8 +4,15 @@
   padding: 20px;
 
   h2 {
-    font-size: 30px;
     margin-bottom: 20px;
+    background: linear-gradient(90deg, orange, blue, black);
+    /* Use text fill color to maintain gradient text color */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    /* Ensure text is fully visible */
+    -webkit-text-fill-color: transparent;
+    font-size: 35px;
   }
 
   p {

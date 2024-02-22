@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./homePage.style.scss";
+import finish from "../../assets/images/finish.jpg";
 
 const HomePage = () => {
   const [countdown, setCountdown] = useState("");
@@ -55,18 +56,18 @@ const HomePage = () => {
   return (
     <div className="homepage">
       <div className="homepage__background">
+        <img src={finish} alt="Marathon Finish Line"></img>
         <div className="homepage__overlay"></div>
       </div>
       <div className="homepage__content">
-        <p className="homepage__description">
+        <p className="homepage__content__description">
+          {countdown}
           "Join us in anticipation as we count down the days, hours, minutes,
           and seconds until the exhilarating marathon event on May 11, 2024!
           Every tick of the clock brings us closer to an unforgettable
           experience filled with determination, camaraderie, and triumph. Let
           the excitement build as we prepare to lace up our shoes and embark on
           this incredible journey together!"
-          <br />
-          {countdown}
         </p>{" "}
       </div>
     </div>

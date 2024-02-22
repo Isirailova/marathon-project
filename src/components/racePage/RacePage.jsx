@@ -1,16 +1,18 @@
 import React, { useState } from "react";
-import image5 from "../../assets/images/5km.jpg";
-import image10 from "../../assets/images/10km.jpg";
-import image15 from "../../assets/images/15km.jpg";
-import "./racePage.style.scss"; // Import CSS file for styling
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import "./racePage.style.scss";
 
 const RacePage = () => {
   const [selectedRace, setSelectedRace] = useState("");
 
-  const raceImages = {
-    "5km": image5,
-    "10km": image10,
-    "15km": image15,
+  const raceLocations = {
+    "5km":
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2971.368752663268!2d-88.00889248481777!3d42.05155839739033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880f7bf4f9d57525%3A0xa823acdad5733d2b!2sBusse%20Woods%2C%20Illinois%2060008%2C%20USA!5e0!3m2!1sen!2s!4v1645320842214!5m2!1sen!2s",
+    "10km":
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2971.368752663268!2d-88.00889248481777!3d42.05155839739033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880f7bf4f9d57525%3A0xa823acdad5733d2b!2sBusse%20Woods%2C%20Illinois%2060008%2C%20USA!5e0!3m2!1sen!2s!4v1645320842214!5m2!1sen!2s",
+    "15km":
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2971.368752663268!2d-88.00889248481777!3d42.05155839739033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880f7bf4f9d57525%3A0xa823acdad5733d2b!2sBusse%20Woods%2C%20Illinois%2060008%2C%20USA!5e0!3m2!1sen!2s!4v1645320842214!5m2!1sen!2s",
   };
 
   const handleRaceSelect = (event) => {
@@ -18,7 +20,19 @@ const RacePage = () => {
   };
 
   return (
-    <div className="race-page">
+    <div className="race__page">
+      <p className="location-container">
+        <FontAwesomeIcon icon={faLocationDot} className="location-icon" />
+        <a
+          href="https://maps.google.com?q=Busse+Woods+IL+60008"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="location-link"
+        >
+          Busse Woods, IL 60008
+        </a>
+      </p>
+
       <p>Selected Race: {selectedRace}</p>
       <select onChange={handleRaceSelect} value={selectedRace}>
         <option value="">Race</option>
@@ -27,7 +41,17 @@ const RacePage = () => {
         <option value="15km">15km</option>
       </select>
       {selectedRace && (
-        <img src={raceImages[selectedRace]} alt={selectedRace} />
+        <iframe
+          title="Google Maps"
+          width="600"
+          height="450"
+          frameBorder="0"
+          style={{ border: 0 }}
+          src={raceLocations[selectedRace]}
+          allowFullScreen=""
+          aria-hidden="false"
+          tabIndex="0"
+        ></iframe>
       )}
     </div>
   );

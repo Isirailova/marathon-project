@@ -1,12 +1,11 @@
 import React from "react";
-import logoImage from "../../assets/images/logo.jpg";
+import logoImage from "../../assets/images/IMG_3745-removebg-preview.png";
 import "./navBar.style.scss";
 
 const NavBar = ({ handleClick, handleRacePage }) => {
-  // Receive handleRacePage function
   const handleRaceSelect = (event) => {
-    handleClick("race"); // Change to handle race page in App component
-    handleRacePage(); // Call handleRacePage function
+    handleClick("race");
+    handleRacePage();
   };
   return (
     <div className="navbar">
@@ -15,20 +14,22 @@ const NavBar = ({ handleClick, handleRacePage }) => {
       </a>
       <div className="navbar__links">
         <a href="#" onClick={() => handleClick("race")}>
-          Race
+          RACE
         </a>
         <a href="#" onClick={() => handleClick("gallery")}>
-          Gallery
+          GALLERY
         </a>
         <a href="#" onClick={() => handleClick("info")}>
-          Info
+          INFO
         </a>
         <a href="#" onClick={() => handleClick("sponsors")}>
-          Sponsors
+          SPONSORS
         </a>
-        <a href="#" id="register" onClick={() => handleClick("register")}>
-          Register
-        </a>
+      </div>
+      <div className="navbar__btn">
+        <button href="#" id="register" onClick={() => handleClick("register")}>
+          REGISTER
+        </button>
       </div>
     </div>
   );
