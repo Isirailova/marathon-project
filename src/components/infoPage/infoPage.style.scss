@@ -1,27 +1,39 @@
 .container {
+  width: 100%;
+  height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 50px;
 
-  &__image {
-    width: 40%;
-    margin-right: 20px;
-    padding: 20px;
+  &__background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 
-    &__1 {
-      width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.259);
   }
   &__content {
-    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    color: rgb(0, 0, 0);
+    margin-left: 50px;
 
     &__table {
       width: 100%;
       border-collapse: collapse;
       margin-bottom: 20px;
+      background-color: rgb(255, 255, 255);
+
       & th,
       & td {
         border: 1px groove #d7d6d6;
@@ -31,18 +43,20 @@
         font-size: 20px;
       }
       & th {
-        background-color: #f2f2f2;
+        background-color: rgba(18, 175, 227, 0.626);
       }
       & tr:hover {
         cursor: pointer;
-        background-color: #f0f0f0;
+        background-color: rgba(18, 175, 227, 0.185);
       }
     }
     &__details {
-      background-color: #f9f9f9;
+      background-color: #ffffff;
       padding: 20px;
       border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      a {
+        color: black;
+      }
       & p {
         margin: 10px 0;
         font-size: 20px;
@@ -51,13 +65,7 @@
   }
 }
 h1 {
-  background: linear-gradient(90deg, orange, blue, black);
-  /* Use text fill color to maintain gradient text color */
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  /* Ensure text is fully visible */
-  -webkit-text-fill-color: transparent;
-  font-size: 30px;
-  font-size: 40px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  font-size: 35px;
 }

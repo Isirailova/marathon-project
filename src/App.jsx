@@ -39,12 +39,11 @@ function App() {
   return (
     <div className="App">
       <NavBar handleClick={handleClick} handleRacePage={handleRacePage} />{" "}
-      {/* Pass handleRacePage function */}
       {showPages.home && <HomePage />}
       {showPages.register && <RegisterPage />}
       {showPages.info && <InfoPage />}
       {showPages.sponsors && <SponsorsPage />}
-      {showPages.race && <RacePage />} {/* Show race page when state is true */}
+      {showPages.race && <RacePage />}
     </div>
   );
 }

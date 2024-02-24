@@ -1,16 +1,15 @@
 import React from "react";
+import way from "../../assets/images/way.jpeg";
 import "./infoPage.style.scss";
 
 const InfoPage = () => {
   return (
     <div className="container">
-      <div className="container__image">
-        <img
-          src="https://th.bing.com/th/id/OIG1.2_xF3Npuh1uX8u9oByDx?pid=ImgGn"
-          alt="Marathon"
-          className="container__image__1"
-        />
+      <div className="container__background">
+        <img src={way} alt="way line"></img>
+        <div className="container__overlay"></div>
       </div>
+
       <div className="container__content">
         <h1>Saturday, May 11, 2024</h1>
         <table className="container__content__table">
