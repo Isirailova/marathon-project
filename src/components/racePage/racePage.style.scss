@@ -1,51 +1,104 @@
-body {
-}
-.race__page {
-  background-image: url("");
-  background-repeat: no-repeat;
-  background-size: cover;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  text-align: center;
+.race {
+  width: 100%;
+  height: 100%;
 
-  p {
-    font-size: 20px;
-    margin-bottom: 20px;
-  }
-  &__gif {
+  &__background img {
     position: absolute;
-    top: 10;
+    top: 0;
     left: 0;
-    margin: 20px;
-  }
-
-  select {
-    font-size: 16px;
-    padding: 10px;
-    margin-bottom: 20px;
-  }
-
-  iframe {
     width: 100%;
-    max-width: 800px;
-    height: 450px;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.226);
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    font-size: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &__container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &__icon {
+        margin-right: 5px;
+      }
+      &__link {
+        text-decoration: underline;
+        font-weight: bold;
+        font-size: 25px;
+        color: rgb(255, 255, 255);
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+    }
+    &__container2 {
+      margin-top: 20px;
+
+      p {
+        font-size: 20px;
+        margin-bottom: 20px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      & select {
+        padding: 5px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        background-color: #f9f9f93c;
+        text-align: center;
+        color: white;
+        margin-left: 20px;
+      }
+    }
+    iframe {
+      width: 600px;
+      height: 450px;
+    }
   }
 }
 
-.location-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  .location-icon {
-    margin-right: 5px;
-  }
-
-  .location-link {
-    text-decoration: underline;
-    font-weight: bold;
-    font-size: 20px;
-    color: rgb(0, 0, 0);
+@media screen and (max-width: 768px) {
+  .race {
+    &__content {
+      margin-top: 25px;
+      &__container {
+        &__icon {
+          font-size: 20px;
+          margin-bottom: -20px;
+        }
+        &__link {
+          font-size: 15px;
+          margin-bottom: -20px;
+        }
+      }
+      &__container2 {
+        select {
+          font-size: 15px;
+          margin-left: 10px;
+        }
+        p {
+          font-size: 18px;
+        }
+      }
+      iframe {
+        width: 320px;
+        height: 400px;
+      }
+    }
   }
 }

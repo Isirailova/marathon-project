@@ -1,12 +1,12 @@
 import React from "react";
-import way from "../../assets/images/way.jpeg";
+import way2 from "../../assets/images/way2.jpeg";
 import "./infoPage.style.scss";
 
 const InfoPage = () => {
   return (
     <div className="container">
       <div className="container__background">
-        <img src={way} alt="way line"></img>
+        <img src={way2} alt="way line"></img>
         <div className="container__overlay"></div>
       </div>
 

@@ -1,3 +1,4 @@
+// App.js
 import React, { useState } from "react";
 import NavBar from "./components/navBar/NavBar";
 import RegisterPage from "./components/registerPage/RegisterPage";
@@ -16,6 +17,8 @@ function App() {
     race: false, // Add race page state
   });
 
+  const [selectedRace, setSelectedRace] = useState(""); // State to hold selected race distance
+
   const handleClick = (linkId) => {
     setShowPages({
       register: linkId === "register",
@@ -26,7 +29,8 @@ function App() {
     });
   };
 
-  const handleRacePage = () => {
+  const handleRacePage = (distance) => {
+    setSelectedRace(distance); // Set selected race state
     setShowPages({
       register: false,
       info: false,
@@ -38,12 +42,12 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar handleClick={handleClick} handleRacePage={handleRacePage} />{" "}
+      <NavBar handleClick={handleClick} handleRacePage={handleRacePage} />
       {showPages.home && <HomePage />}
       {showPages.register && <RegisterPage />}
       {showPages.info && <InfoPage />}
       {showPages.sponsors && <SponsorsPage />}
-      {showPages.race && <RacePage />}
+      {showPages.race && <RacePage selectedRace={selectedRace} />}
     </div>
   );
 }
