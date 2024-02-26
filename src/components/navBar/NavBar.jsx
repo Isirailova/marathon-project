@@ -2,11 +2,7 @@ import React from "react";
 import logoImage from "../../assets/images/IMG_3745-removebg-preview.png";
 import "./navBar.style.scss";
 
-const NavBar = ({ handleClick, handleRacePage }) => {
-  const handleRaceSelect = (event) => {
-    handleClick("race");
-    handleRacePage();
-  };
+const NavBar = ({ handleClick }) => {
   return (
     <div className="navbar">
       <a href="#" className="navbar__logo" onClick={() => handleClick("logo")}>
