@@ -53,7 +53,7 @@ const RegisterPage = () => {
                 type: "tel",
               }}
               countryOptions={{
-                us: "USA    (+1)",
+                us: "USA(+1)",
               }}
             />
           </div>

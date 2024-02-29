@@ -1,11 +1,11 @@
-// App.js
 import React, { useState } from "react";
 import NavBar from "./components/navBar/NavBar";
+import HomePage from "./components/homePage/HomePage";
+import RacePage from "./components/racePage/RacePage";
+import GalleryPage from "./components/galleryPage/GalleryPage";
 import RegisterPage from "./components/registerPage/RegisterPage";
 import InfoPage from "./components/infoPage/InfoPage";
 import SponsorsPage from "./components/sponsorsPage/SponsorsPage";
-import HomePage from "./components/homePage/HomePage";
-import RacePage from "./components/racePage/RacePage";
 import "./App.css";
 
 function App() {
@@ -14,29 +14,31 @@ function App() {
     info: false,
     sponsors: false,
     home: true,
-    race: false, // Add race page state
+    race: false,
+    gallery: false,
   });
 
-  const [selectedRace, setSelectedRace] = useState(""); // State to hold selected race distance
-
+  const [selectedRace, setSelectedRace] = useState("");
   const handleClick = (linkId) => {
     setShowPages({
       register: linkId === "register",
       info: linkId === "info",
       sponsors: linkId === "sponsors",
       home: linkId === "logo" || linkId === "home",
-      race: linkId === "race", // Update race page state
+      race: linkId === "race",
+      gallery: linkId === "gallery",
     });
   };
 
   const handleRacePage = (distance) => {
-    setSelectedRace(distance); // Set selected race state
+    setSelectedRace(distance);
     setShowPages({
       register: false,
       info: false,
       sponsors: false,
       home: false,
-      race: true, // Show race page
+      race: true,
+      gallery: false,
     });
   };
 
@@ -48,6 +50,7 @@ function App() {
       {showPages.info && <InfoPage />}
       {showPages.sponsors && <SponsorsPage />}
       {showPages.race && <RacePage selectedRace={selectedRace} />}
+      {showPages.gallery && <GalleryPage />}
     </div>
   );
 }

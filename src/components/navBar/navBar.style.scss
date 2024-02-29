@@ -12,7 +12,7 @@
   &__logo img {
     width: 120px;
     display: block;
-    margin-left: -10px;
+    // margin-left: -10px;
   }
 
   &__links {
@@ -101,7 +101,7 @@
 
     &__links {
       display: flex;
-      margin-left: -70px;
+      margin-left: -60px;
       margin-right: 20px;
       margin-top: 80px;
       gap: 8px;
@@ -111,7 +111,7 @@
       font-size: 12px;
     }
     &__btn {
-      margin-left: -117px;
+      margin-left: -80px;
     }
     #register {
       display: flex;
